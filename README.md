@@ -11,6 +11,7 @@ keystroke injection on Hall-effect keyboards, while also in-
 corporating a calibration mechanism to mitigate real world
 disruptions such as keyboard displacements
 
+Its core design includes: 
 1. We designed a universal attack device for Hall-effect keyboards, which can simultaneously leverage a magnetometer array for keystroke inference (eavesdropping) and an electromagnet array for per-key keystroke injection on Hall-effect keyboards.
 2. We propose a novel, unified attack framework that combines both eavesdropping and keystroke injection in a single system. By incorporating a calibration mechanism, DualStrike significantly enhances robustness, enabling reliable attacks even under real-world disturbances such as keyboard displacement.
 The demo video of DualStrike can be found in the link: https://sites.google.com/view/magkey-anonymous?usp=sharing
@@ -57,9 +58,9 @@ We use the PlatformIO framework to program the main PCB of the attack device acc
 2. **Flashing:**  
    Connect the Main PCB and the flashing board as shown in the figure below. The flashing board is connected to the Main PCB via an FPC line and the FPC connector on the Main PCB. Then, connect the flashing board to your computer via USB first.
 
-   ![Flashing Connection](Imgs/Flashing.png)
+![Flashing Connection](Imgs/Flashing.png)
 
-   Once connected, click the `PlatformIO: Upload` button at the bottom of the IDE to flash the firmware.
+Once connected, click the `PlatformIO: Upload` button at the bottom of the IDE to flash the firmware.
 
 You can choose to flash the `ReadSensor_Wired_Arduino` code to transmit raw magnetometer array data via serial port for offline processing and analysis with the Python implementation (`3.Software`).  
 Alternatively, you can flash `2.Firmware/DualStrike_Arduino`, which can run independently on the MCU to enable all real-time functional features of DualStrike.
