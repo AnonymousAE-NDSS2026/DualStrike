@@ -1,6 +1,6 @@
 # About
 
-This repository contains all software and hardware implementations of DualStrike.
+This repository contains all software and hardware implementations of DualStrike
 
 ## Overview
 
